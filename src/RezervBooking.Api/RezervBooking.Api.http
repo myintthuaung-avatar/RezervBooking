@@ -1,0 +1,14 @@
+@RezervBooking.Api_HostAddress = http://localhost:5000
+
+GET {{RezervBooking.Api_HostAddress}}/api/timetable
+Accept: application/json
+
+###
+
+POST {{RezervBooking.Api_HostAddress}}/api/bookings
+Content-Type: application/json
+
+{
+  "customerId": 1,
+  "scheduleId": 2
+}

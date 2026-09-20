@@ -1,0 +1,11 @@
+/.vs
+/src/RezervBooking.Api/bin
+/src/RezervBooking.Api/obj
+/src/RezervBooking.Application/bin
+/src/RezervBooking.Application/obj
+/src/RezervBooking.Domain/bin
+/src/RezervBooking.Domain/obj
+/src/RezervBooking.Infrastructure/bin
+/src/RezervBooking.Infrastructure/obj
+/tests/RezervBooking.Tests/bin
+/tests/RezervBooking.Tests/obj
