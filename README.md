@@ -8,10 +8,6 @@ A .NET 8 studio-booking API using MySQL with Entity Framework Core, Redis lockin
 2. `dotnet run --project src/RezervBooking.Api`
 3. Open the Swagger URL printed by ASP.NET Core (normally `http://localhost:5000/swagger`).
 
-Schema and seed data are created on first start. Override `ConnectionStrings__MySql` and `ConnectionStrings__Redis` for a non-local environment. Run checks with `dotnet test`.
-
-To create the schema manually, run [docs/create-schema.sql](docs/create-schema.sql) in MySQL Workbench, or run `mysql -u root -p < docs/create-schema.sql` from the repository root. Then start the API once to insert its sample seed data.
-
 ## Endpoints
 
 | Method | Endpoint | Purpose |
@@ -25,11 +21,9 @@ To create the schema manually, run [docs/create-schema.sql](docs/create-schema.s
 
 Booking payload: `{ "customerId": 1, "scheduleId": 2 }`.
 
-## Architecture and seed data
+## Architecture
 
 `Domain` contains entities; `Application` owns contracts and ports; `Infrastructure` implements EF persistence, the booking workflow, Redis locks, seeding and the background worker; `Api` provides minimal endpoints and Swagger.
-
-The seed includes 10 customers, two businesses, 10 future schedules, an already-full schedule with a waiting customer, matching packages, and an expired package. [Schema documentation](docs/schema.md) contains the ERD and indexes.
 
 ## Assumptions
 
